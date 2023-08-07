@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(67, 67, 110);
+}
+.container{
+    background-color: white;
+    height: 100px;
+    padding: 20px;
+    border-radius: 14px;
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+}
+.search-box input{
+    width: 80%;
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding-left: 40px;
+}
+.search-box input ::placeholder{
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.search-box img{
+    height: 30px;
+    margin-right: 6px;
+}
+.search-box button{
+    height: 50px;
+    width: 50px;
+    background:transparent;
+    border-radius: 50%;
+    padding-left: 4px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+.search-box button:hover{
+    background-color: rgb(183, 183, 234);
+}
+.not-found{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+.not-found img{
+    height: 80px;
+    margin-bottom: 20px;
+}
+.not-found p {
+    font-size: 20px;
+    font-weight: 500;
+}
+.weather-deitails{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 14px;
+}
+.humidity{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.wind{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.humidity div , .wind  div {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight:500;
+}
+.humidity div span,.wind div span{
+    font-size: 22px;
+
+}
+.weather-box{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.weather-box img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+.weather-box p{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.weather-box, .weather-deitails{
+    opacity: 0;
+    scale: 0;
+}
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+@keyframes fadeIn{
+    to{
+        scale : 1;
+        opacity:  1;
+    }
+
+}
